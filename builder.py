@@ -66,13 +66,21 @@ press enter again or anything else to exit loop\n
 	try:
 		start_scraper(pages, sections)
 		print("\n Done!")
-		break
-	except:
+
 		res = ("""
-			Something went wrong...
 			Do you want to restart? (y/n)
 			""")
 		if res in ("y", "Y"):
+			continue
+		else:
+			break
+		
+	except:
+		res1 = ("""
+			Something went wrong...
+			Do you want to restart? (y/n)
+			""")
+		if res1 in ("y", "Y"):
 			continue
 		else:
 			break
